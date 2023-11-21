@@ -2,6 +2,9 @@ import Image from "next/image";
 import React from "react";
 import bg from "./bg01.png";
 import bgc1 from "./bg-c1.png";
+import rageroom from "./rageroom.jpg";
+import session from "./session.jpg";
+import info from "./info.jpg";
 const MainPage = () => {
   return (
     <div className="w-full flex-col">
@@ -29,20 +32,57 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl mt-5">
-        <figure>
-          <img
-            src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-black">Shoes!</h2>
-          <p className=" text-black">
-            If a dog chews shoes whose shoes does he choose?
-          </p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+      <div className="w-full m-8 px-8 font-bold text-3xl text-dark-green">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam
+        numquam exercitationem quas.{" "}
+      </div>
+      <div className="flex gap-x-2 p-4 flex-row place-content-evenly">
+        <div className="card w-96 bg-base-100 shadow-xl mt-5">
+          <figure>
+            <Image src={rageroom} />
+          </figure>
+          <div className="card-body card-compact drop-shadow-xl">
+            <h2 className="card-title text-dark-green">Rage Room</h2>
+            <p className=" text-black">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary bg-sec-red text-white-green">
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="card w-96 bg-base-100 shadow-xl mt-5">
+          <figure>
+            <Image src={session} />
+          </figure>
+          <div className="card-body card-compact">
+            <h2 className="card-title text-dark-green">Personal Sessions</h2>
+            <p className=" text-black">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary  bg-sec-red text-white-green">
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="card w-96 bg-base-100 shadow-xl mt-5">
+          <figure>
+            <Image src={info} />
+          </figure>
+          <div className="card-body card-compact">
+            <h2 className="card-title text-dark-green">Inspiraton Area</h2>
+            <p className=" text-black">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary  bg-sec-red text-white-green">
+                Buy Now
+              </button>
+            </div>
           </div>
         </div>
       </div>

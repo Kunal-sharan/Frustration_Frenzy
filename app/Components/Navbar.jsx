@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <div className="navbar bg-white-green">
+      <div className="navbar bg-white-green p-4">
         <div className="flex-1">
           <a className="btn btn-ghost text-dark-green text-xl">FRUSTRATION FRENZY</a>
         </div>

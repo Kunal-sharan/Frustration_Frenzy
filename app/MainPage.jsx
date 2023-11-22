@@ -5,6 +5,7 @@ import bgc1 from "./bg-c1.png";
 import rageroom from "./rageroom.jpg";
 import session from "./session.jpg";
 import info from "./info.jpg";
+import Link from "next/link";
 const MainPage = () => {
   return (
     <div className="w-full flex-col">
@@ -48,7 +49,7 @@ const MainPage = () => {
             </p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary bg-sec-red text-white-green">
-                Book Now
+                <Link href=""> Book Now</Link>
               </button>
             </div>
           </div>
@@ -63,9 +64,11 @@ const MainPage = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary  bg-sec-red text-white-green">
-                Book Now
-              </button>
+              <Link href="/sessions">
+                <button className="btn btn-primary  bg-sec-red text-white-green">
+                  Book Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>

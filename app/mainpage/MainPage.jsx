@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import bg from "./bg01.png";
@@ -8,6 +9,7 @@ import info from "./info.jpg";
 import Link from "next/link";
 const MainPage = () => {
   return (
+
     <div className="w-full flex-col">
       <div className="w-full flex place-content-center ">
         <div className=" w-full h-[79vh] flex place-content-start relative">

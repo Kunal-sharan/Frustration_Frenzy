@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
-import docdp from "../../../public/person1.jpg"
+import docdp from "../../../public/person1.jpg";
 import DateInput from "./date/dates";
 import TimeInput from "./time/time";
 
@@ -41,31 +41,31 @@ export default function DoctorDetails() {
           <div>
             <div className="w-full  text-dark-green  grid-rows-4 ">
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023|9:30 AM
+                26/10/2023 | 9:30 AM
               </button>
             </div>
           </div>

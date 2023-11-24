@@ -4,8 +4,10 @@ import React from "react";
 import docdp from "../../../public/person1.jpg";
 import DateInput from "./date/dates";
 import TimeInput from "./time/time";
-
+import Link from "next/link";
+ import axios from 'axios';
 export default function DoctorDetails() {
+
   return (
     <div className="w-full h-full flex flex-row bg-dark-green over">
       <div className="w-1/3 h-full">
@@ -40,9 +42,25 @@ export default function DoctorDetails() {
           {/* <div><TimeInput/></div> */}
           <div>
             <div className="w-full  text-dark-green  grid-rows-4 ">
-              <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
-                26/10/2023 | 9:30 AM
-              </button>
+              {/* <input type="email" className="p-2" value={(txt)=>{
+                setUserMail(txt)
+              }} ></input>
+              <button className="btn-primary" onClick={() => {
+                  resend.emails.send({
+                    from: "onboarding@resend.dev",
+                    to: "sonusharan14@gmail.com",
+                    subject: "Appointment booked",
+                    html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+                  });
+                }}
+            >Submit</button> */}
+              <Link href="/sendEmail">
+                <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
+                  26/10/2023 | 9:30 AM
+                </button>
+              </Link>
+              <DateInput></DateInput>
+              <TimeInput></TimeInput>
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
                 26/10/2023 | 9:30 AM
               </button>

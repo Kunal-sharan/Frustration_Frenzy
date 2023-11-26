@@ -6,6 +6,7 @@ import DateInput from "./date/dates";
 import TimeInput from "./time/time";
 import Link from "next/link";
  import axios from 'axios';
+ import { aglePageKaData } from "../Form";
 export default function DoctorDetails() {
 
   return (
@@ -16,23 +17,16 @@ export default function DoctorDetails() {
       <div className="w-2/3 h-full flex flex-col ">
         <div className="max-h-2/5 w-9/10 bg-white-green m-5 p-4 rounded-2xl drop-shadow-2xl ">
           <div className="w-full text-dark-green break-words text-lg">
-            <strong>Name: </strong>
+            <strong>Name: </strong>{aglePageKaData.name || "martin luthar king"}
           </div>
           <div className="w-full text-dark-green break-words text-lg">
-            <strong>Expertise: </strong>
+            <strong>Expertise: </strong>{aglePageKaData.expertise || "kjvjbknknjkhvh"}
           </div>
           <div className="w-full text-dark-green break-words text-lg">
-            <strong>Experience: </strong>
+            <strong>Experience: </strong>{aglePageKaData.experience || "jihjgchvjkhlj;hkvhj"}
           </div>
           <div className="w-full text-dark-green break-words">
-            <strong className="text-lg">About: </strong> Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Deserunt ea, iusto expedita
-            nesciunt, ullam, quasi dolorum adipisci ratione sint veritatis
-            aspernatur amet necessitatibus mollitia quod officiis vero? Numquam,
-            pariatur vitae? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Aspernatur repellat eveniet enim molestias corporis
-            praesentium distinctio est libero earum voluptate, minima quae
-            perspiciatis aliquid, natus expedita. Placeat nemo fuga aliquam!
+            <strong className="text-lg">About: </strong> {aglePageKaData.about||"lorem ipsum jhjvghbkjvhghbkjhgvkhjbkjhvgjbkjkugjkvbigciGCqjevcWHUEVQJB H GQULCGUCV  VEFGQJCGUVWD HJVVHJSVAJ GJGYQJV VVHQVW DCAHVCAQHVCJD VJ"}
           </div>
         </div>
         <div className="max-h-1/2 w-9/10  bg-white-green m-5 rounded-2xl drop-shadow-2xl flex flex-col place-content-center ">
@@ -59,8 +53,8 @@ export default function DoctorDetails() {
                   26/10/2023 | 9:30 AM
                 </button>
               </Link>
-              <DateInput></DateInput>
-              <TimeInput></TimeInput>
+              {/* <DateInput></DateInput>
+              <TimeInput></TimeInput> */}
               <button className="w-fit bg-dark-green text-white-green p-2 m-4 rounded-lg hover:scale-105 hover:bg-sec-red ">
                 26/10/2023 | 9:30 AM
               </button>

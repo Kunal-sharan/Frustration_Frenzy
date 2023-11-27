@@ -11,12 +11,17 @@
   "dependencies": {
     "@clerk/nextjs": "^4.27.2",
     "@formspree/react": "^2.5.1",
+    "@react-email/container": "0.0.10",
+    "@react-email/html": "0.0.6",
+    "@react-email/section": "0.0.10",
+    "@react-email/text": "0.0.6",
     "@sendgrid/mail": "^7.7.0",
     "axios": "^1.6.2",
     "next": "14.0.2",
     "react": "^18",
     "react-datepicker": "^4.23.0",
     "react-dom": "^18",
+    "react-email": "1.9.5",
     "react-player": "^2.13.0",
     "resend": "^2.0.0"
   },

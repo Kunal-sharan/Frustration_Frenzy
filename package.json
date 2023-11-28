@@ -23,6 +23,7 @@
     "react-dom": "^18",
     "react-email": "1.9.5",
     "react-player": "^2.13.0",
+    "react-time-picker": "^6.5.2",
     "resend": "^2.0.0"
   },
   "devDependencies": {

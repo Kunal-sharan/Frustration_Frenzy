@@ -40,9 +40,6 @@ export default function Home() {
     );
   }
 
-  const handleTimeChange = (event) => {
-    setSelectedTime(event.target.value);
-  };
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -93,7 +90,10 @@ export default function Home() {
           </div>
           <div className="m-auto">
             <div>
-              <button onClick={handleClick} className="text-black">Add</button>
+              <button onClick={()=>{
+                handleAddSchedule();
+                handleClick();
+              }} className="text-black">Add</button>
               {components}
             </div>
           </div>
@@ -193,7 +193,11 @@ export default function Home() {
           </div>
           <div className="m-auto">
             <div>
-              <button onClick={handleClick} className="text-black">Add</button>
+              <button onClick={()=>
+              {
+                handleClick()
+                handleAddSchedule()
+              }} className="text-black">Add</button>
             </div>
           </div>
           <div className="">

@@ -64,10 +64,10 @@ export default function Home() {
     );
   }
   const handleAddSchedule = () => {
-    if (selectedDate && selectedTime) {
+    if (selectedDate && value) {
       const newSchedule = {
         date: selectedDate,
-        time: selectedTime,
+        time: value,
       };
 
       setFormData((prevData) => ({

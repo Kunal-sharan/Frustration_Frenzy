@@ -33,9 +33,13 @@ export default function Home() {
 
   function ScheduleComponent() {
     return (
-      <div>
-        <DateInput />
-        <TimeInput />
+      <div className="w-full flex flex-row my-4">
+        <div className="mx-1">
+          <DateInput />
+        </div>
+        <div className="mx-1">
+          <TimeInput />
+        </div>
       </div>
     );
   }
@@ -59,7 +63,7 @@ export default function Home() {
   function TimeInput() {
     return (
       <div>
-        <TimePicker disableClock onChange={onChange} value={value} />
+        <TimePicker className="bg-white text-black " disableClock onChange={onChange} value={value} />
       </div>
     );
   }
@@ -184,8 +188,8 @@ export default function Home() {
         <div className="text-primary-green font-medium text-xl font-sans w-full">
           Add Schedule
         </div>
-        <div className="w-full flex flex-row">
-          <div className="mx-1">
+        <div className="w-full flex flex-row flex-wrap">
+          <div className=" mx-1">
             <DateInput />
           </div>
           <div className="mx-1">
@@ -210,13 +214,14 @@ export default function Home() {
             query: { data: formData },
           }}
         >
-          <div>
+          <div className="my-4">
             <button
               type="submit"
               className="btn btn-primary  bg-sec-red text-white-green w-60 hover:bg-primary-green"
               onClick={() => {
                 aglePageKaData = formData;
                 console.log(formData);
+                console.log(aglePageKaData);
               }}
             >
               Submit

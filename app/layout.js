@@ -12,13 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <Navbar />
           <div className="overflow-hidden">{children}</div>
         </body>
       </html>
-    </ClerkProvider>
   );
 }

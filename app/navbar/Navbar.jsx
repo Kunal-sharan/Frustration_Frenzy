@@ -6,7 +6,7 @@ import React from "react";
 const Navbar = () => {
   const {user,isLoaded}=useUser();
   return (
-    <header>
+    <header className="fixed z-50 w-full mb-2">
       <nav
         className="flex items-center justify-between p-4 lg:px-6 h-20 border border-t-0 border-l-0 border-r-0 border-b-black bg-white-green"
         aria-label="Global"

@@ -9,8 +9,8 @@ import TimePicker from "react-time-picker";
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
 
-let aglePageKaData={}
-let docSchedule = {};
+let aglePageKaData = {};
+let docSchedule = [];
 export default function Home() {
   const [value, onChange] = useState("10:00");
   const [selectedDate, setSelectedDate] = useState(null);
@@ -44,7 +44,6 @@ export default function Home() {
     );
   }
 
-
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
@@ -63,7 +62,12 @@ export default function Home() {
   function TimeInput() {
     return (
       <div>
-        <TimePicker className="bg-white text-black " disableClock onChange={onChange} value={value} />
+        <TimePicker
+          className="bg-white text-black "
+          disableClock
+          onChange={onChange}
+          value={value}
+        />
       </div>
     );
   }
@@ -94,10 +98,15 @@ export default function Home() {
           </div>
           <div className="m-auto">
             <div>
-              <button onClick={()=>{
-                handleAddSchedule();
-                handleClick();
-              }} className="text-black">Add</button>
+              <button
+                onClick={() => {
+                  handleAddSchedule();
+                  handleClick();
+                }}
+                className="text-black"
+              >
+                Add
+              </button>
               {components}
             </div>
           </div>
@@ -122,8 +131,9 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-dark-green w-2/5 rounded-3xl p-6 mx-auto my-20 flex-col h-fit">
-      <h1 className="text-white-green text-center text-4xl font-bold font-sans mb-4 p-2">
+    <div className="">
+    <div className="bg-dark-green absolute left-0 right-0 top-0 bottom-0 w-2/5 rounded-3xl p-6 m-auto flex-col h-fit">
+      <h1 className="text-white-green text-center text-4xl font-bold font-sans my-4 p-2">
         Doctor's Form
       </h1>
       <form
@@ -135,6 +145,7 @@ export default function Home() {
             Name
             <br />
             <input
+              required
               autoComplete="off"
               className="p-1 rounded-lg text-black w-full font-normal"
               name="name"
@@ -149,6 +160,7 @@ export default function Home() {
             Expertise
             <br />
             <input
+              required
               autoComplete="off"
               className="p-1 rounded-lg text-black w-full font-normal"
               name="expertise"
@@ -163,6 +175,7 @@ export default function Home() {
             Experience
             <br />
             <input
+              required
               autoComplete="off"
               className="p-1 rounded-lg text-black w-full font-normal"
               name="experience"
@@ -177,6 +190,7 @@ export default function Home() {
             About
             <br />
             <textarea
+              required
               autoComplete="off"
               className="p-1 rounded-lg text-black w-full font-normal"
               name="about"
@@ -197,21 +211,23 @@ export default function Home() {
           </div>
           <div className="m-auto">
             <div>
-              <button onClick={()=>
-              {
-                handleClick()
-                handleAddSchedule()
-              }} className="text-black">Add</button>
+              <button
+                onClick={() => {
+                  handleClick();
+                  handleAddSchedule();
+                }}
+                className=" btn text-black"
+              >
+                Add
+              </button>
             </div>
           </div>
-          <div className="">
-            {components}
-          </div>
+          <div className="">{components}</div>
         </div>
         <Link
           href={{
             pathname: "/Components/doctor_details",
-            query: { data: formData },
+            query: { data: formData , docSchedule },
           }}
         >
           <div className="my-4">
@@ -220,8 +236,7 @@ export default function Home() {
               className="btn btn-primary  bg-sec-red text-white-green w-60 hover:bg-primary-green"
               onClick={() => {
                 aglePageKaData = formData;
-                console.log(formData);
-                console.log(aglePageKaData);
+                docSchedule=aglePageKaData.schedules;
               }}
             >
               Submit
@@ -230,8 +245,9 @@ export default function Home() {
         </Link>
       </form>
     </div>
+    </div>
   );
 }
 
 export { aglePageKaData };
-
+export {docSchedule};
